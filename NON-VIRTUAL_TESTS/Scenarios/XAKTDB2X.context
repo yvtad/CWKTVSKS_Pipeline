@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5b508b8a787be73b59238d38" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
-  <ExtensionData />
-  <ExtensionData componentName="xaktdb2x" componentId="5ba164a6787be73b59238fd3" />
-  <XaUnit path="XAKTDB2X.scenario" />
-</ExecutionContext>

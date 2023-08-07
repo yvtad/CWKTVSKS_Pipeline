@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5b508b8a787be73b59238d38" logLevel="INFO" remote="false" useSimulations="true" uploadResult="true" timeout="600" readTimeout="30" debuggerType="CCEXPEDITER" jobInfoInterval="3" repositoryId="5e270e8418074200f8dc537a" ccrepository="SNCBAW0.XPCOVER.REPOSIT" ccsystem="Q423" cctestid="012523" ccreset="false" ccshow="true">
-  <ExtensionData />
-  <ExtensionData componentName="cwxtsubc" componentId="5b86ba5e787be73b59238eb9" />
-  <XaUnit path="CWXTSUBC - M.scenario" />
-</ExecutionContext>
