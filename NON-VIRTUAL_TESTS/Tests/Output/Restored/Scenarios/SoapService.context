@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5def926918074200a00ddbcc" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" useRepository="true">
-  <ExtensionData />
-  <XaUnit path="SoapService.scenario" />
-</ExecutionContext>
