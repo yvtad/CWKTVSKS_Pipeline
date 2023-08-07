@@ -5,5 +5,8 @@
       <Content><![CDATA[//XXX DD DSN=]]></Content>
     </Job>
     <VerifyRemoteFile name="Verify remote file" mode="COMPARE" haltExecution="false" actualPath="HBOYXN0.REPORT.FILE2" expectedPath="HBOYXN0.REPORT.FILE" />
+    <Job name="FA Compare JCL" haltExecution="false" jobDefinitionId="REPORTC" datasetName="HBOYXN0.CPWR.CNTL(REPORTC)" jobLocation="DATASET" returnCodeVerify="value &lt; 8">
+      <Content><![CDATA[//XXX DD DSN=]]></Content>
+    </Job>
   </Test>
 </XaUnit>
