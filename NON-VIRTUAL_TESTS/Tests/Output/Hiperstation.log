@@ -1,0 +1,43 @@
+15:46:57.550 INFO      TOPAZ            ***************************************
+15:46:57.550 INFO      TOPAZ            ** Execution from Topaz with options **
+15:46:57.550 INFO      TOPAZ            ***************************************
+15:46:57.550 INFO      TOPAZ            Using repository: true
+15:46:57.550 INFO      TOPAZ            Repository URL: http://cwcc.bmc.com:2020/totaltestapi/
+15:46:57.550 INFO      TOPAZ            ***************************************
+15:46:57.551 INFO      Engine           Test Scenario execution started
+15:46:57.551 INFO      Engine           Using context settings:
+  Engine Version                : 20.12.2.v20221024-2031_109
+  Environment id                : 79161366-7654-4b4d-853a-2505a8273d94
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : 172.19.4.200
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+  Use Repository Server         : true
+  Account Information           : 
+  Dataset High Level Qualifier  : 
+15:46:57.551 INFO      Engine           Setting variables from context and context data extensions
+15:46:57.551 INFO      Engine             id: environmentId      value: 79161366-7654-4b4d-853a-2505a8273d94
+15:46:57.551 INFO      Engine             id: environmentType    value: BATCH
+15:46:57.551 INFO      Engine             id: userId             value: SNCBAW0
+15:46:57.551 INFO      Engine             id: accountingInfo     value: 
+15:46:57.551 INFO      Engine             id: datasetHQL         value: 
+15:46:57.552 INFO      Hiperstation     Executing Hiperstation script from JCL in scenario
+15:46:57.552 INFO      CW01             Sending Job execution request to Host 
+15:47:04.095 INFO      CW01             Job execution completed with status:
+  Job status     : JCLERROR
+  Job status msg : Job SNCBAW03(J0635528) ended with JCL error, check JES output.
+  Job name       : SNCBAW03
+  Job id         : J0635528
+  Return code    : JCL ERROR
+  Abend code     : 
+  Abend reason   : 
+15:47:04.095 ERROR     Engine           It was not possible to execute the Hiperstation Job Unable to execute the job definition at the host. Job stopped with JCL error
+15:47:04.095 ERROR     Engine           An error occurred. Now stopping the execution.
+15:47:04.095 INFO      Engine           Test Scenario execution ended

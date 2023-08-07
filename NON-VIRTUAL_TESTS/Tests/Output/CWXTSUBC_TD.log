@@ -1,0 +1,44 @@
+10:06:58.206 INFO      TOPAZ            ***************************************
+10:06:58.207 INFO      TOPAZ            ** Execution from Topaz with options **
+10:06:58.207 INFO      TOPAZ            ***************************************
+10:06:58.207 INFO      TOPAZ            Using repository: true
+10:06:58.207 INFO      TOPAZ            Repository URL: http://dtw-cwcc-td.nasa.cpwr.corp:2020/totaltestapi/
+10:06:58.207 INFO      TOPAZ            ***************************************
+10:06:58.207 INFO      Engine           Test Scenario execution started
+10:06:58.207 INFO      Engine           Using context settings:
+  Engine Version                : 20.8.2.v20211026-0506_133
+  Environment id                : 5ebdbe24e3a452122099d922
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.nasa.cpwr.corp
+  Server port                   : 16198
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+  Use Repository Server         : true
+10:06:58.207 INFO      Engine           Setting variables from context and context data extensions
+10:06:58.208 INFO      Engine             id: environmentId      value: 5ebdbe24e3a452122099d922
+10:06:58.208 INFO      Engine             id: environmentType    value: BATCH
+10:06:58.208 INFO      Engine             id: userId             value: SNCBAW0
+10:06:58.208 INFO      Engine             id: accountingInfo     value: 
+10:06:58.208 INFO      Component        Interpreting Component: CWXTSUBC program:CWXTSUBC
+10:06:58.210 INFO      TEST DRIVE - BATCH Sending Module execution request to Host for module:CWXTSUBC rollback:false
+10:06:58.328 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/ddd54fad0e504c98960ec6ef19c4f667
+10:06:59.224 INFO      HCIClient        Job has been started at host with JobId:J0214919
+10:07:04.789 INFO      TEST DRIVE - BATCH Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job SNCBAW0E(J0214919) ended with return code: 0000
+  Job name       : SNCBAW0E
+  Job id         : J0214919
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+10:07:05.007 INFO      TEST DRIVE - BATCH Component completed with program exit: +0
+10:07:05.202 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+10:07:05.210 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+10:07:05.211 INFO      Component        Finished interpreting Component: CWXTSUBC program:CWXTSUBC
+10:07:05.211 INFO      Engine           Test Scenario execution ended

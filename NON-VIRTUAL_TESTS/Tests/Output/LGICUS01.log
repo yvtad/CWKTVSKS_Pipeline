@@ -1,0 +1,49 @@
+15:56:35.073 INFO      TOPAZ            ***************************************
+15:56:35.073 INFO      TOPAZ            ** Execution from Topaz with options **
+15:56:35.073 INFO      TOPAZ            ***************************************
+15:56:35.074 INFO      TOPAZ            Using repository: true
+15:56:35.074 INFO      TOPAZ            Repository URL: http://cwcc.bmc.com:2020/totaltestapi/
+15:56:35.074 INFO      TOPAZ            ***************************************
+15:56:35.076 INFO      Engine           Test Scenario execution started
+15:56:35.076 INFO      Engine           Using context settings:
+  Engine Version                : 20.12.1.v20220909-1355_70
+  Environment id                : 5b5f2a71787be73b59238d7b
+  Environment type              : Cics
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.bmc.com
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+  Use Repository Server         : true
+  Account Information           : 
+  Dataset High Level Qualifier  : 
+15:56:35.077 INFO      Engine           Setting variables from context and context data extensions
+15:56:35.077 INFO      Engine             id: environmentId      value: 5b5f2a71787be73b59238d7b
+15:56:35.077 INFO      Engine             id: environmentType    value: CICS
+15:56:35.078 INFO      Engine             id: userId             value: SNCBAW0
+15:56:35.078 INFO      Engine             id: accountingInfo     value: 
+15:56:35.078 INFO      Engine             id: datasetHQL         value: 
+15:56:35.087 INFO      Component        Interpreting Component: LGICUS01 program:LGICUS01
+15:56:35.089 INFO      Component        Component will be executed in CICS and top level element definitions are:
+15:56:35.090 INFO      Component          Element: dfhcommarea Area type:DEFAULT
+15:56:35.113 INFO      CWCC CICS        Sending Module execution request to Host for module:LGICUS01 rollback:false
+15:56:35.195 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/f7d1266530ee4b74b4df26dbdd87a30c
+15:56:35.697 INFO      HCIClient        Job has been started at host with JobId:J0322353
+15:56:40.870 INFO      CWCC CICS        Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job SNCBAW0C(J0322353) ended with return code: 0000
+  Job name       : SNCBAW0C
+  Job id         : J0322353
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+15:56:40.949 INFO      CWCC CICS        Component completed with program exit: +0
+15:56:41.184 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+15:56:41.458 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+15:56:41.458 INFO      Component        Finished interpreting Component: LGICUS01 program:LGICUS01
+15:56:41.459 INFO      Engine           Test Scenario execution ended

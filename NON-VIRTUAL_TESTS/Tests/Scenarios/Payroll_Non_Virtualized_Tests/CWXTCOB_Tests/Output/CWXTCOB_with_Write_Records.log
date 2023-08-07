@@ -1,0 +1,77 @@
+14:01:43.543 INFO      TOPAZ            ***************************************
+14:01:43.543 INFO      TOPAZ            ** Execution from Topaz with options **
+14:01:43.544 INFO      TOPAZ            ***************************************
+14:01:43.544 INFO      TOPAZ            Using repository: true
+14:01:43.544 INFO      TOPAZ            Repository URL: http://cwcc.bmc.com:2020/totaltestapi/
+14:01:43.545 INFO      TOPAZ            ***************************************
+14:01:43.549 INFO      Engine           Test Scenario execution started
+14:01:43.554 INFO      Engine           Using context settings:
+  Engine Version                : 20.13.1.v20221223-1346_92
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.bmc.com
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : IMINGG0
+  Use Repository Server         : true
+  Account Information           : 
+  Dataset High Level Qualifier  : 
+14:01:43.554 INFO      Engine           Setting variables from context and context data extensions
+14:01:43.554 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+14:01:43.555 INFO      Engine             id: environmentType    value: BATCH
+14:01:43.555 INFO      Engine             id: userId             value: IMINGG0
+14:01:43.555 INFO      Engine             id: accountingInfo     value: 
+14:01:43.555 INFO      Engine             id: datasetHQL         value: 
+14:01:43.557 INFO      WriteRemoteFile  Interpreting WriteRemoteFile
+14:01:43.564 INFO      WriteRemoteFile  Number of records to write:1
+14:01:43.565 INFO      WriteRemoteFile    File name             : SALESSUP.EDU.TTT.CWXTDATA
+14:01:43.565 INFO      WriteRemoteFile    Record length         : 80
+14:01:43.565 INFO      WriteRemoteFile    Record format         : FB
+14:01:43.565 INFO      WriteRemoteFile    Block size            : 27920
+14:01:43.566 INFO      WriteRemoteFile    Volume name           : PCC004
+14:01:43.566 INFO      WriteRemoteFile    Unit name             : 
+14:01:43.566 INFO      WriteRemoteFile    Unit type             : TRK
+14:01:43.566 INFO      WriteRemoteFile    Primary allocation    : 15
+14:01:43.566 INFO      WriteRemoteFile    Secondary allocation  : 5
+14:01:43.567 INFO      WriteRemoteFile    Directory block count : 0
+14:01:43.567 INFO      WriteRemoteFile    Dataset type          : NONE
+14:01:43.567 INFO      WriteRemoteFile    Disposition           : Old
+14:01:43.575 INFO      WriteRemoteFile  Sending Write dataset request to Host 
+14:01:43.733 INFO      HCIClient        Creating job directory /u/xatester/imingg0/f65a606eb605461788a1de000cdef120
+14:01:44.817 INFO      HCIClient        Job has been started at host with JobId:J0347995
+14:01:45.382 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job IMINGG0X(J0347995) ended with return code: 0000
+  Job name       : IMINGG0X
+  Job id         : J0347995
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+14:01:45.723 INFO      WriteRemoteFile  Write dataset request completed
+14:01:45.725 INFO      Component        Interpreting Component: CWXTCOB - Education program:CWXTCOB
+14:01:45.726 INFO      Component        Using setup JCL for execution
+14:01:45.726 INFO      Component          JCL for setup:
+//EMPFILE  DD DISP=SHR,DSN=SALESSUP.EDU.TTT.CWXTDATA
+//RPTFILE  DD SYSOUT=*
+14:01:45.738 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTCOB rollback:false
+14:01:46.276 INFO      HCIClient        Creating job directory /u/xatester/imingg0/09711223ee3544daa8f7bfb66c06942b
+14:01:47.536 INFO      HCIClient        Job has been started at host with JobId:J0347996
+14:01:52.998 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job IMINGG0E(J0347996) ended with return code: 0000
+  Job name       : IMINGG0E
+  Job id         : J0347996
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+14:01:53.211 INFO      CWCC Batch       Component completed with program exit: +0
+14:01:53.439 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+14:01:53.975 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+14:01:53.976 INFO      Component        Finished interpreting Component: CWXTCOB - Education program:CWXTCOB
+14:01:53.976 INFO      Engine           Test Scenario execution ended

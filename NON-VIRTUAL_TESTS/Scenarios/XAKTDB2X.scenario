@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="XAKTDB2X" caseInsensitiveCompare="false">
+  <Test>
+    <EnterpriseData repository="&lt;Local Repository&gt;" specification="KT_DEMOTAB_LOAD" specificationtype="LOAD" enginecompatibilitytype="RDX" description="Reload Db2 Test Data for KT_DEMOTAB" />
+    <SQLSelect id="DISPLAY_LOAD" description="Display rows after reloading the KT_DEMOTAB table" maxRows="20">
+      <Statement>SELECT * FROM KT_DEMOTAB</Statement>
+    </SQLSelect>
+    <Component id="xaktdb2x" label="XAKTDB2X" moduleName="XAKTDB2X" programExitVerify="value &lt; 8" rollback="false">
+      <Data>
+        <parminfo>
+          <parm-lth>5</parm-lth>
+          <parm-data>00001</parm-data>
+          <grand-total />
+          <total-record />
+        </parminfo>
+      </Data>
+    </Component>
+    <SQLSelect id="SELECT_AFTER" description="DISPLAY KT_DEMOTAB AFTER EXECUTION" maxRows="20">
+      <Statement>SELECT WAGES FROM KT_DEMOTAB</Statement>
+      <Output name="WAGES" />
+    </SQLSelect>
+    <IterateData id="iterate" referencedId="SELECT_AFTER" dataPath="">
+      <Verify name="Verify_Wages" haltExecution="false" description="Verify that values in the WAGES column are greater than ZERO">
+        <Statement><![CDATA[SELECT_AFTER.Row.WAGES != "0.00"]]></Statement>
+      </Verify>
+    </IterateData>
+  </Test>
+  <MetaData>
+    <Component name="XAKTDB2X" type="COBOL">
+      <INOUT>
+        <parminfo>
+          <parm-lth type="NumericBinary" length="4" bytes="2" inOutType="INPUT" defaultValue="5" signed="true" decimals="0" signsep="false" signpos="" />
+          <parm-data type="Character" length="5" bytes="5" inOutType="INPUT" defaultValue="00001" />
+          <grand-total type="NumericBinary" length="7" bytes="4" inOutType="OUTPUT" signed="true" decimals="0" signsep="false" signpos="" />
+          <total-record type="NumericDisplay" length="3" bytes="3" inOutType="OUTPUT" signed="false" decimals="0" signsep="false" signpos="" />
+        </parminfo>
+      </INOUT>
+    </Component>
+  </MetaData>
+</XaUnit>

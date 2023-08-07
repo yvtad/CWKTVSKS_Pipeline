@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="CWXTCOB" caseInsensitiveCompare="false">
+  <Test>
+    <WriteRemoteFile fileName="SALESSUP.EDU.TTT.CWXTDATA" id="prepareInputFile" label="Prepare Input File" mDataDefinitionName="CWXTEMPH" description="&#x9;" recordLength="80" recordFormat="FB" blockSize="27920" volumnName="PCC004" unitName="" unitType="TRK" primaryAllocation="15" secondaryAllocation="5" directoryBlockCount="0" datasetType="NONE" memberName="" disposition="Old">
+      <Records>
+        <Record>
+          <employee-work-area>
+            <wa-emp-num>00001</wa-emp-num>
+            <wa-emp-type>H</wa-emp-type>
+            <wa-emp-region>1</wa-emp-region>
+            <wa-emp-name>NICK GUILLEMETT</wa-emp-name>
+            <wa-emp-address>
+              <wa-emp-street>STREET1</wa-emp-street>
+              <wa-emp-city>DETROIT</wa-emp-city>
+              <wa-emp-state>MI</wa-emp-state>
+              <wa-emp-zip>48071</wa-emp-zip>
+            </wa-emp-address>
+            <wa-hourly-employee-data>
+              <wa-emp-hours>45</wa-emp-hours>
+              <wa-emp-rate>25</wa-emp-rate>
+              <filler1 />
+            </wa-hourly-employee-data>
+            <wa-emp-hire-date>
+              <wa-emp-hire-yy>17</wa-emp-hire-yy>
+              <wa-emp-hire-mm>01</wa-emp-hire-mm>
+              <wa-emp-hire-dd>01</wa-emp-hire-dd>
+            </wa-emp-hire-date>
+            <filler1 />
+          </employee-work-area>
+        </Record>
+      </Records>
+    </WriteRemoteFile>
+    <Component label="CWXTCOB - Education" moduleName="CWXTCOB" programExitVerify="value &lt; 8" rollback="false">
+      <Data>
+        <parminfo>
+          <parm-lth>5</parm-lth>
+          <parm-data>00001</parm-data>
+        </parminfo>
+      </Data>
+      <Setup>
+        <Content><![CDATA[//EMPFILE  DD DISP=SHR,DSN=SALESSUP.EDU.TTT.CWXTDATA
+//RPTFILE  DD SYSOUT=*]]></Content>
+      </Setup>
+    </Component>
+  </Test>
+  <MetaData>
+    <MDataDefinition name="CWXTEMPH">
+      <employee-work-area native="01 EMPLOYEE-WORK-AREA.">
+        <wa-emp-num type="NumericDisplay" length="5" bytes="5" native="05 WA-EMP-NUM PIC 9(5)." signed="false" decimals="0" signsep="false" signpos="" />
+        <wa-emp-type type="Character" length="1" bytes="1" native="05 WA-EMP-TYPE PIC X." />
+        <wa-emp-region type="NumericDisplay" length="1" bytes="1" native="05 WA-EMP-REGION PIC 9." signed="false" decimals="0" signsep="false" signpos="" />
+        <wa-emp-name type="Character" length="15" bytes="15" native="05 WA-EMP-NAME PIC X(15)." />
+        <wa-emp-address native="05 WA-EMP-ADDRESS.">
+          <wa-emp-street type="Character" length="15" bytes="15" native="10 WA-EMP-STREET PIC X(15)." />
+          <wa-emp-city type="Character" length="8" bytes="8" native="10 WA-EMP-CITY PIC X(8)." />
+          <wa-emp-state type="Character" length="2" bytes="2" native="10 WA-EMP-STATE PIC XX." />
+          <wa-emp-zip type="Character" length="9" bytes="9" native="10 WA-EMP-ZIP PIC X(9)." />
+        </wa-emp-address>
+        <wa-hourly-employee-data native="05 WA-HOURLY-EMPLOYEE-DATA.">
+          <wa-emp-hours type="NumericDisplay" length="2" bytes="2" native="10 WA-EMP-HOURS PIC 9(2)." signed="false" decimals="0" signsep="false" signpos="" />
+          <wa-emp-rate type="NumericPacked" length="3" bytes="3" native="10 WA-EMP-RATE PIC 9(3)V99 COMP-3." signed="false" decimals="2" signsep="false" signpos="" />
+          <filler1 type="Character" length="8" bytes="8" native="10 FILLER PIC X(8)." />
+        </wa-hourly-employee-data>
+        <wa-emp-hire-date native="05 WA-EMP-HIRE-DATE.">
+          <wa-emp-hire-yy type="NumericDisplay" length="2" bytes="2" native="10 WA-EMP-HIRE-YY PIC 9(2)." signed="false" decimals="0" signsep="false" signpos="" />
+          <wa-emp-hire-mm type="NumericDisplay" length="2" bytes="2" native="10 WA-EMP-HIRE-MM PIC 9(2)." signed="false" decimals="0" signsep="false" signpos="" />
+          <wa-emp-hire-dd type="NumericDisplay" length="2" bytes="2" native="10 WA-EMP-HIRE-DD PIC 9(2)." signed="false" decimals="0" signsep="false" signpos="" />
+        </wa-emp-hire-date>
+        <filler1 type="Character" length="5" bytes="5" native="05 FILLER PIC X(5)." />
+      </employee-work-area>
+    </MDataDefinition>
+    <Component name="CWXTCOB" type="COBOL">
+      <INOUT>
+        <parminfo>
+          <parm-lth type="NumericBinary" length="4" bytes="2" signed="true" decimals="0" signsep="false" signpos="" />
+          <parm-data type="Character" length="5" bytes="5" />
+        </parminfo>
+      </INOUT>
+    </Component>
+  </MetaData>
+</XaUnit>

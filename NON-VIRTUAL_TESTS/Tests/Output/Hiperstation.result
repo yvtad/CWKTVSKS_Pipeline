@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnitResult resultType="FAILURE" containsSimulation="false">
+  <ExecutionId>0e56628c-23df-47ff-ac4a-36ea92b9abec</ExecutionId>
+  <Message>An error occurred and the execution has been stopped. It was not possible to execute the Hiperstation Job Unable to execute the job definition at the host. Job stopped with JCL error</Message>
+  <AST>
+    <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" caseInsensitiveCompare="false">
+      <Test />
+    </XaUnit>
+  </AST>
+  <Context>
+    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="79161366-7654-4b4d-853a-2505a8273d94" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="SNCBAW0">
+      <platformruntime />
+      <ExtensionData />
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" caseInsensitiveCompare="false" path="Hiperstation.scenario">
+        <Test>
+          <Hiperstation datasetName="" groupName="" haltExecution="false" retrieveCompares="true" retrieveJournals="false" retrieveSummaries="false" jobLocation="JOBDEFINITION">
+            <Content><![CDATA[//SNCBAW03 JOB ('OSBBAS2.3.0FSP'),'WESTERHOLT',
+//  CLASS=L,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=SNCBAW0
+//*
+//*  HIPERSTATION UNATTENDED MODE EXECUTION
+//*
+//STEP1    EXEC PGM=EHSBATCH
+//SYSPRINT DD SYSOUT=*
+//STEPLIB  DD DISP=SHR,DSN=SYS2.CW.QFR17A.SQQFLOAD
+//SYSLIB   DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.SCRIPT
+//SYSIN    DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.CONTROL(SSC1IX)
+//****
+//DELETE1 EXEC PGM=IEFBR14
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//DD01     DD DSN=SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.CSVFILE,
+//         UNIT=SYSDA,
+//         SPACE=(TRK,(1,1)),
+//         DISP=(MOD,DELETE,DELETE),
+//         DCB=(RECFM=FB,LRECL=80,BLKSIZE=8000)
+//****
+//STEP2    EXEC PGM=EHSBATCH
+//SYSPRINT DD SYSOUT=*
+//STEPLIB  DD DISP=SHR,DSN=SYS2.CW.QFR17A.SQQFLOAD
+//SYSLIB   DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.SCRIPT
+//SUMMARY  DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.SUMMARY
+//*           DCB=(RECFM=VBA,LRECL=143,BLKSIZE=2040),
+//*           UNIT=SYSDA,SPACE=(TRK,(1,1))
+//CSVFILE  DD DSN=SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.CSVFILE,
+//            DISP=(NEW,CATLG,CATLG),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),
+//            UNIT=SYSDA,SPACE=(TRK,(1,1))
+//SYSIN    DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.CONTROL(EXPTSUM)
+//****
+//DELETE2 EXEC PGM=IEFBR14
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//DD01     DD DSN=SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.JUNIT,
+//         UNIT=SYSDA,
+//         SPACE=(TRK,(1,1)),
+//         DISP=(MOD,DELETE,DELETE),
+//         DCB=(RECFM=FB,LRECL=80,BLKSIZE=8000)
+//****
+//STEP2    EXEC PGM=EHSBATCH
+//SYSPRINT DD SYSOUT=*
+//STEPLIB  DD DISP=SHR,DSN=SYS2.CW.QFR17A.SQQFLOAD
+//SYSLIB   DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.SCRIPT
+//SUMMARY  DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.SUMMARY
+//*           DCB=(RECFM=VBA,LRECL=143,BLKSIZE=2040),
+//*           UNIT=SYSDA,SPACE=(TRK,(1,1))
+//JUNIT    DD DSN=SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.JUNIT,
+//            DISP=(NEW,CATLG,CATLG),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),
+//            UNIT=SYSDA,SPACE=(TRK,(1,1))
+//SYSIN    DD DISP=SHR,DSN=SALESSUP.HIPER.DEMO.GENAPP.CONTROL(JUNITSUM)
+//****
+//FTPSTEP  EXEC PGM=FTP,
+//*  FOLLOWING LINE IS IP ADDRESS OF TARGET MACHINE
+// PARM='192.168.96.148'
+//SYSPRINT DD SYSOUT=*
+//*
+//* FTP COMMANDS FOLLOW
+//*
+//NETRC    DD *
+OPEN 192.168.96.148
+MACHINE 192.168.96.148 LOGIN ftsuser PASSWORD ftsuser
+/*
+//SYSFTPD  DD *
+CLIENTERRCODES TRUE
+/*
+//OUTPUT   DD SYSOUT=*
+//INPUT    DD *
+ASCII
+SENDSITE
+CD RESULTS
+PWD
+DIR
+MDEL HIPER_SSC1IX_RESULTS.*
+PUT 'SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.JUNIT' HIPER_SSC1IX_RESULTS.XML
+PUT 'SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.SUMMARY' HIPER_SSC1IX_RESULTS.TXT
+PUT 'SALESSUP.HIPER.DEMO.GENAPP.SSC1IX.CSVFILE' HIPER_SSC1IX_RESULTS.CSV
+PWD
+DIR
+CLOSE
+QUIT
+/*
+//
+//*
+//*]]></Content>
+          </Hiperstation>
+        </Test>
+      </XaUnit>
+      <ExternalResources />
+    </ExecutionContext>
+  </Context>
+  <Started>20221220-15-46-57</Started>
+  <Ended>20221220-15-47-04</Ended>
+</XaUnitResult>

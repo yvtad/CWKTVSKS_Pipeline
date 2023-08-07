@@ -1,0 +1,30 @@
+08:38:13.791 INFO      TOPAZ            ***************************************
+08:38:13.792 INFO      TOPAZ            ** Execution from Topaz with options **
+08:38:13.792 INFO      TOPAZ            ***************************************
+08:38:13.792 INFO      TOPAZ            Using repository: true
+08:38:13.792 INFO      TOPAZ            Repository URL: http://cwcc.nasa.cpwr.corp:2020/totaltestapi/
+08:38:13.792 INFO      TOPAZ            ***************************************
+08:38:13.792 INFO      Engine           Test Scenario execution started
+08:38:13.793 INFO      Engine           Using context settings:
+  Engine Version                : 20.10.1.v20220314-0254_88
+  Environment id                : 5def926918074200a00ddbcc
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : 10.10.0.200
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+  Use Repository Server         : true
+08:38:13.793 INFO      Engine           Setting variables from context and context data extensions
+08:38:13.793 INFO      Engine             id: environmentId      value: 5def926918074200a00ddbcc
+08:38:13.793 INFO      Engine             id: environmentType    value: BATCH
+08:38:13.793 INFO      Engine             id: userId             value: SNCBAW0
+08:38:13.793 INFO      Engine             id: accountingInfo     value: 
+08:38:13.794 INFO      SoapService      Interpreting SoapService:NumberConversion endpoint:https://www.dataaccess.com/webservicesserver/NumberConversion.wso operation:NumberToWords() qualifyData:false namespace:http://www.dataaccess.com/webservicesserver/
+08:38:17.320 INFO      SoapService      Finished interpreting Service: NumberConversion operation: NumberToWords
+08:38:17.321 INFO      Engine           Test Scenario execution ended

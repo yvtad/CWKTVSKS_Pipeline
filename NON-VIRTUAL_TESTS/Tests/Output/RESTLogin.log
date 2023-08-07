@@ -1,0 +1,31 @@
+08:39:20.488 INFO      TOPAZ            ***************************************
+08:39:20.488 INFO      TOPAZ            ** Execution from Topaz with options **
+08:39:20.488 INFO      TOPAZ            ***************************************
+08:39:20.489 INFO      TOPAZ            Using repository: true
+08:39:20.489 INFO      TOPAZ            Repository URL: http://cwcc.nasa.cpwr.corp:2020/totaltestapi/
+08:39:20.489 INFO      TOPAZ            ***************************************
+08:39:20.489 INFO      Engine           Test Scenario execution started
+08:39:20.489 INFO      Engine           Using context settings:
+  Engine Version                : 20.10.1.v20220314-0254_88
+  Environment id                : 5def926918074200a00ddbcc
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : 10.10.0.200
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+  Use Repository Server         : true
+08:39:20.490 INFO      Engine           Setting variables from context and context data extensions
+08:39:20.490 INFO      Engine             id: environmentId      value: 5def926918074200a00ddbcc
+08:39:20.490 INFO      Engine             id: environmentType    value: BATCH
+08:39:20.490 INFO      Engine             id: userId             value: SNCBAW0
+08:39:20.490 INFO      Engine             id: accountingInfo     value: 
+08:39:20.491 INFO      RestService      Interpreting RestService:  endpoint: http://restapi.adequateshop.com/api/authaccount/login
+08:39:21.194 INFO      RestService      Response data can be refered to by <id>.response.statuscode, <id>.response.reason and <id>.response.body
+08:39:21.195 INFO      RestService      Verifying http status code: 200 against expression: value>=200 && value<300
+08:39:21.489 INFO      Engine           Test Scenario execution ended
