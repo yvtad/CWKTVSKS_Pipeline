@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="TEST DRIVE CICS" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
-  <ExtensionData />
-  <ExtensionData componentName="lgicus01" componentId="5ecd30c8e3a45215644458a3" />
-  <XaUnit path="LGICUS01_TD.scenario" />
-</ExecutionContext>
