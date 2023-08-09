@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" caseInsensitiveCompare="false">
-  <Test>
-    <Job name="CWXTCOB_pass" haltExecution="false" datasetName="HBOYXN0.CPWR.CNTL(CWTTJCL2)" jobLocation="DATASET" returnCodeVerify="value &lt; 8">
-      <Content><![CDATA[//XXX DD DSN=]]></Content>
-    </Job>
-    <VerifyRemoteFile name="Verify remote file" mode="COMPARE" haltExecution="false" actualPath="HBOYXN0.REPORT.FILE2" expectedPath="HBOYXN0.REPORT.GOOD" />
-  </Test>
-</XaUnit>
