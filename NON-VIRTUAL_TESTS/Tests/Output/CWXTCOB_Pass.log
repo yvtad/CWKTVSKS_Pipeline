@@ -1,0 +1,58 @@
+16:29:17.392 INFO      Total Test       ***************************************
+16:29:17.393 INFO      Total Test       ** Execution from Topaz with options **
+16:29:17.394 INFO      Total Test       ***************************************
+16:29:17.394 INFO      Total Test       Using repository: true
+16:29:17.395 INFO      Total Test       Repository URL: http://cwcc.bmc.com:2020/totaltestapi/
+16:29:17.395 INFO      Total Test       ***************************************
+16:29:17.396 INFO      Engine           Test Scenario execution started
+16:29:17.396 INFO      Engine           Using context settings:
+  Engine Version                : 20.15.1.v20230614-1440_85
+  Environment id                : 5b5089c9787be73b59238d35
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwc2.bmc.com
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : HBOYXN0
+  Use Repository Server         : true
+  Account Information           : 
+  Dataset High Level Qualifier  : 
+16:29:17.396 INFO      Engine           Setting variables from context and context data extensions
+16:29:17.397 INFO      Engine             id: environmentId      value: 5b5089c9787be73b59238d35
+16:29:17.397 INFO      Engine             id: environmentType    value: BATCH
+16:29:17.397 INFO      Engine             id: userId             value: HBOYXN0
+16:29:17.398 INFO      Engine             id: accountingInfo     value: 
+16:29:17.399 INFO      Engine             id: datasetHQL         value: 
+16:29:17.401 INFO      Job              Interpreting JOB: CWXTCOB_pass
+16:29:17.402 INFO      Job              The Job in File/Dataset HBOYXN0.CPWR.CNTL(CWTTJCL2) will be executed
+16:29:17.402 INFO      CWC2 Batch       Sending Job execution request to Host 
+16:29:22.565 INFO      CWC2 Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HBOYXN0X(J0420113) ended with return code: 0000
+  Job name       : HBOYXN0X
+  Job id         : J0420113
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+16:29:22.566 INFO      Job              Successfully executed job: CWXTCOB_pass
+16:29:22.566 INFO      Component        Verifying job return code: 0000 against verify expression: value < 8
+16:29:22.580 INFO      VerifyRemoteFile Interpreting VerifyRemoteFile in COMPARE mode. Dataset to verify: HBOYXN0.REPORT.FILE2
+16:29:22.580 INFO      CWC2 Batch       Sending Job execution request to Host 
+16:29:22.629 INFO      HCIClient        Creating job directory /u/xatester/hboyxn0/1e5df23c27ed4590902a61b83fad4ca3
+16:29:22.957 INFO      HCIClient        Job has been started at host with JobId:J0420114
+16:29:28.167 INFO      CWC2 Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HBOYXN0S(J0420114) ended with return code: 0000
+  Job name       : HBOYXN0S
+  Job id         : J0420114
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+16:29:28.260 INFO      VerifyRemoteFile Dataset compared to be as expected
+16:29:28.260 INFO      VerifyRemoteFile Expected and Actual datasets were found to be identical
+16:29:28.260 INFO      Engine           Test Scenario execution ended
