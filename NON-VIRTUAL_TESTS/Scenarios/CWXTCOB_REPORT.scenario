@@ -4,9 +4,6 @@
     <Job name="Job" haltExecution="false" description="EXECUTE CWXTJCLC AND GENERATE HBOYXN0.REPORT.FILE" datasetName="HBOYXN0.CPWR.CNTL(CWTTJCL1)" jobLocation="DATASET" returnCodeVerify="value &lt; 8">
       <Content><![CDATA[//XXX DD DSN=]]></Content>
     </Job>
-    <Job name="FA Compare JCL" haltExecution="false" datasetName="HBOYXN0.CPWR.CNTL(FACOMP2)" jobLocation="DATASET" returnCodeVerify="value &lt; 8">
-      <Content><![CDATA[//XXX DD DSN=]]></Content>
-    </Job>
     <FileAIDCompare label="FAComp" checkChanged="true" checkInserted="true" checkDeleted="true">
       <JCL><![CDATA[//HBOYXN0N JOB (ACCOUNT),'YVETTE SANTANA',CLASS=A,
 //        MSGCLASS=X,NOTIFY=HBOYXN0,REGION=0M
