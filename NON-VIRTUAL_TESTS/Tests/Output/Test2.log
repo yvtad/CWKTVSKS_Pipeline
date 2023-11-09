@@ -1,0 +1,43 @@
+10:00:17.908 INFO      Total Test       ***************************************
+10:00:17.909 INFO      Total Test       ** Execution from Topaz with options **
+10:00:17.909 INFO      Total Test       ***************************************
+10:00:17.909 INFO      Total Test       Using repository: false
+10:00:17.909 INFO      Total Test       ***************************************
+10:00:17.911 INFO      Engine           Test Scenario execution started
+10:00:17.912 INFO      Engine           Using context settings:
+  Engine Version                : 20.15.3.v20230823-1439_159
+  Environment id                : 3733a884-8048-4e92-a5dc-22fee13c3d54
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : 198.147.191.81
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : 1047
+  Host user Id                  : HBOYXN0
+  Use Repository Server         : false
+  Account Information           : 
+  Dataset High Level Qualifier  : 
+10:00:17.912 INFO      Engine           Setting variables from context and context data extensions
+10:00:17.913 INFO      Engine             id: environmentId      value: 3733a884-8048-4e92-a5dc-22fee13c3d54
+10:00:17.917 INFO      Engine             id: environmentType    value: BATCH
+10:00:17.917 INFO      Engine             id: userId             value: HBOYXN0
+10:00:17.917 INFO      Engine             id: accountingInfo     value: 
+10:00:17.917 INFO      Engine             id: datasetHQL         value: 
+10:00:17.918 INFO      Job              Interpreting JOB: Job
+10:00:17.921 INFO      Job              The Job in File/Dataset HBOYXN0.WBSAMP.JCL(CWKTVSKS) will be executed
+10:00:17.930 INFO      CWCC - Demo System Sending Job execution request to Host 
+10:00:23.119 INFO      CWCC - Demo System Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HBOYXN0X(J0441981) ended with return code: 0000
+  Job name       : HBOYXN0X
+  Job id         : J0441981
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+10:00:23.119 INFO      Job              Successfully executed job: Job
+10:00:23.122 INFO      Component        Verifying job return code: 0000 against verify expression: value < 8
+10:00:23.702 INFO      Engine           Test Scenario execution ended
